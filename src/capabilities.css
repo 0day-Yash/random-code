@@ -1,0 +1,48 @@
+.capabilities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    position: relative;
+    padding: 1rem;
+}
+
+.capability-card {
+    background: rgba(17, 17, 17, 0.7);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    transition: transform 0.2s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.capability-card[data-capability="web"] { border: 2px solid #00FF99; }
+.capability-card[data-capability="cloud"] { border: 2px solid #00C4FF; }
+.capability-card[data-capability="network"] { border: 2px solid #FF00FF; }
+.capability-card[data-capability="social"] { border: 2px solid #FFB800; }
+.capability-card[data-capability="osint"] { border: 2px solid #00FFFF; }
+.capability-card[data-capability="code"] { border: 2px solid #FF00CC; }
+.capability-card[data-capability="vuln"] { border: 2px solid #00FF66; }
+.capability-card[data-capability="tools"] { border: 2px solid #66FFFF; }
+
+.capability-card:hover {
+    transform: translateY(-2px);
+}
+
+/* Remove complex animations */
+.connection-lines,
+.connection-line,
+.hexagon-shape {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .capabilities-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .capabilities-grid {
+        grid-template-columns: 1fr;
+    }
+}
