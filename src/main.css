@@ -882,4 +882,15 @@ section::before {
   ::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(to bottom, #3bc9db, #7209b7);
   }
+
+  /* Scroll Progress Bar */
+  .scroll-progress {
+    position: fixed;
+    top: 64px; /* Position below navbar */
+    left: 0;
+    height: 3px;
+    background: linear-gradient(to right, #4361ee, #3bc9db);
+    z-index: 1000;
+    transition: width 0.2s ease-out;
+  }
 }

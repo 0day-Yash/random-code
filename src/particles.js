@@ -114,12 +114,12 @@ class ParticleSystem {
 document.addEventListener('DOMContentLoaded', () => {
     new ParticleSystem('particles-container', {
         particleCount: 75,
-        color: 'rgba(67, 97, 238, 0.5)',
+        color: 'rgba(47, 217, 0, 0.5)',
         minSize: 1,
-        maxSize: 3,
-        speed: 0.5,
+        maxSize: 6,
+        speed: 1.0,
         connectParticles: true,
-        lineColor: 'rgba(67, 97, 238, 0.1)',
+        lineColor: 'rgba(77, 196, 8, 0.4)',
         maxConnections: 4
     });
 });

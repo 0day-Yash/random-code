@@ -149,6 +149,19 @@ ul {
     height: var(--header-height);
 }
 
+/* --- Scroll Progress Bar --- */
+.scroll-progress {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent-color) 0%, #4f46e5 100%);
+    z-index: 1000;
+    transition: width 0.1s ease-out;
+    box-shadow: 0 0 10px rgba(96, 165, 250, 0.4);
+}
+
 .header-container {
     display: flex;
     align-items: center;
@@ -245,16 +258,22 @@ ul {
 .services-grid .glass-card {
     background: linear-gradient(135deg, var(--card-bg-color) 0%, rgba(39, 39, 42, 0.8) 100%);
     transition: all 0.3s ease;
+    border: 2px solid var(--accent-color);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .services-grid .glass-card:hover {
     background: linear-gradient(135deg, rgba(96, 165, 250, 0.1) 0%, var(--card-bg-color) 100%);
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
 }
 
 .services-grid .glass-card .icon-container {
     margin: 0 auto 1rem;
     width: 64px;
     height: 64px;
+    background: linear-gradient(135deg, var(--accent-color) 0%, rgba(39, 39, 42, 0.8) 100%);
+    border-radius: 50%;
 }
 
 .services-grid .glass-card:hover .icon-container i {
@@ -268,9 +287,13 @@ ul {
     border-radius: 8px;
     border: 1px solid var(--border-color);
     font-weight: 500;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.glass-card:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+    border-color: var(--accent-color);
 }
 
 .glass-card:hover {
